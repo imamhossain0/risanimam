@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Imam's World</title>
+  <link rel="shortcut icon" href="imam hossain.jpg" type="image/x-icon">
+  <!-- <link rel="stylesheet" href="sam.css"> -->
+</head>
+<body>
+
+    <style>
+        :root {
+  --nav-height: 72px;
+  --deep-blue: #102153;
+  --accent: #ffd400;
+  --card-shadow: 0 6px 18px rgba(16, 33, 83, 0.08);
+  --glass: rgba(255, 255, 255, 0.95);
+  --muted: #7b7b8a;
+  --gap: 22px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Inter, system-ui, sans-serif;
+  color: #24324a;
+  background: #9ea5c0;
+}
+
+/* NAV */
+.nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 28px;
+  background: linear-gradient(135deg, #2b1b6f, #c83b3b, #ffb43d);
+}
+.nav .brand {
+  font-weight: 800;
+  color: #fff;
+}
+.nav .links {
+  display: flex;
+  gap: 22px;
+}
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* HERO */
+.hero {
+  padding-top: var(--nav-height);
+  background: linear-gradient(135deg, #2b1b6f 0%, #c83b3b 40%, #ffb43d 100%);
+  color: white;
+  height: 246px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 140px 20px 70px;
+}
+
+#animation {
+  animation-name: imamanimation;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+.hero h1 {
+  font-size: 44px;
+  margin-bottom: 12px;
+  font-weight: 800;
+}
+.hero p {
+  max-width: 760px;
+  margin-bottom: 22px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+/* MAIN */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 20px;
+}
+.section-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 28px;
+}
+.section-title h2 {
+  font-size: 28px;
+  color: var(--deep-blue);
+}
+
+/* SERVICES - FLEXBOX */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  justify-content: center;
+}
+.card {
+  background: var(--glass);
+  padding: 28px;
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+  text-align: center;
+  flex: 1 1 calc(33.333% - var(--gap));
+  min-width: 240px;
+  max-width: 360px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: var(--deep-blue);
+  font-size: 18px;
+}
+.card p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* FOOTER - FLEXBOX */
+footer {
+  background: var(--deep-blue);
+  color: rgba(255, 255, 255, 0.95);
+  padding: 48px 20px;
+}
+.footer-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.footer-col {
+  flex: 1 1 200px;
+  width: 100px;
+}
+.footer-grid h4 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+.footer-grid a {
+  color: #ddd;
+  text-decoration: none;
+}
+.socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+.socials a {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .nav {
+    flex-direction: column;
+    height: auto;
+    padding: 12px 20px;
+    gap: 10px;
+  }
+  .nav .links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .hero {
+    padding: 100px 16px 50px;
+    height: auto;
+  }
+  .hero h1 {
+    font-size: 26px;
+  }
+  .hero p {
+    font-size: 13px;
+  }
+
+  .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .footer-grid {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@keyframes imamanimation {
+  from {
+    color: rgba(26, 27, 27, 0.589);
+    transform: translateY(200px);
+  }
+  to {
+    color: rgb(255, 255, 253);
+  }
+}
+
+
+#animation2{
+    animation-name: animation2;
+    animation-timing-function: ease-out;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+}
+@keyframes animation2 {
+  from {
+    color: rgba(26, 27, 27, 0.589);
+  }
+  to {
+    color: rgb(255, 255, 253);
+    transform: scale(1.3);
+  }
+}
+
+
+    </style>
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="brand" id="animation2">Imam's World</div>
+    <nav class="links">
+      <a href="#">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1 id="animation">Welcome to Imam's World</h1>
+    <p>Let us make our future now, and let us make our dreams tomorrow's reality.</p>
+  </section>
+
+  <!-- SERVICES -->
+  <main class="container" id="services">
+    <div class="section-title">
+      <h2>Our Services</h2>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Web Design</h3>
+        <p>We create stunning, responsive websites that provide exceptional user experiences and drive results for your business.</p>
+      </div>
+
+      <div class="card">
+        <h3>Digital Marketing</h3>
+        <p>Our strategic marketing solutions help you reach your target audience and achieve your business goals effectively.</p>
+      </div>
+
+      <div class="card">
+        <h3>App Development</h3>
+        <p>We build powerful mobile applications that engage users and deliver value across all platforms and devices.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>About Imam's World</h4>
+        <p>Imam's World is a modern digital agency focused on creating innovative solutions that help businesses thrive in the digital age.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <p><a href="#">Home</a><br><a href="#services">Services</a><br><a href="#about">About Us</a><br><a href="#portfolio">Portfolio</a><br><a href="#contact">Contact</a></p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <p>📍 123 Business Street, City, Country<br>📞018*******<br>✉️ info@Imam's World.com</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
